@@ -1,3 +1,5 @@
+import Dashboard from "@/layouts/dashboard";
+
 export default function Home() {
-  return <div>home page</div>;
+  return <Dashboard>hello</Dashboard>;
 }

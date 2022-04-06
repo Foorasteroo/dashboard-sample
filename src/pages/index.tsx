@@ -1,16 +1,14 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import type { GetStaticProps, NextPage } from "next";
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione culpa
-      recusandae similique facilis eos exercitationem. Consectetur laborum ea,
-      autem eos repellat quis id illo porro est magni hic, velit quae?
-    </div>
-  );
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    redirect: {
+      destination: "/home",
+      permanent: true,
+    },
+  };
 };
 
-export default Home;
+const Index: NextPage = () => null;
+
+export default Index;
