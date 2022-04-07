@@ -8,7 +8,7 @@ const Nav = styled.nav`
 
 export default function Navbar() {
   return (
-    <Nav className="flex flex-col gap-2 p-8 min-h-screen">
+    <Nav className="flex flex-col gap-2 px-12 py-8  min-h-screen">
       <Link href="/home">
         <a>
           <h2 className="hidden">Minnow</h2>

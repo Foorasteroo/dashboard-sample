@@ -1,5 +1,5 @@
 import { ChangeEventHandler, useState } from "react";
-import styled from "@emotion/styled";
+import Head from "next/head";
 
 export default function Header() {
   const [darkModeEnabled, setDarkModeEnabled] = useState(false);
@@ -8,9 +8,15 @@ export default function Header() {
     setDarkModeEnabled(e.target.checked);
   };
 
+  const headerTitle = "Hello John";
+
   return (
     <header className="flex flex-row justify-between items-center py-4">
-      <h1 className="text-4xl">Hello John</h1>
+      <Head>
+        <title>{headerTitle}</title>
+        <meta name="description" content="Welcome to your dashboard" />
+      </Head>
+      <h1 className="text-4xl">{headerTitle}</h1>
       <div>
         <label htmlFor="darkModeEnabled">
           Dark Mode {darkModeEnabled ? "🟢 " : "⚪️"}
