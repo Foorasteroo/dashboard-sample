@@ -11,7 +11,7 @@ export default function Header() {
   const headerTitle = "Hello John";
 
   return (
-    <header className="flex flex-row justify-between items-center py-4">
+    <header className="flex flex-col-reverse gap-4 sm:flex-row justify-between items-center py-4">
       <Head>
         <title>{headerTitle}</title>
         <meta name="description" content="Welcome to your dashboard" />

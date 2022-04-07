@@ -13,12 +13,12 @@ const MainContainer = styled.div`
 
 export const Dashboard: FC = ({ children }) => {
   return (
-    <div className="container mx-auto my-4 shadow-lg font-sans">
-      <div className="flex flex-cols-2 ">
-        <Sidebar className="w-1/4 rounded-l-md">
+    <div className="container mx-auto shadow-lg font-sans">
+      <div className="flex flex-col sm:flex-row">
+        <Sidebar className="sm:w-1/4 sm:rounded-l-md">
           <Navbar />
         </Sidebar>
-        <MainContainer className="w-3/4 p-8 rounded-r-md">
+        <MainContainer className="sm:w-3/4 p-8 sm:rounded-r-md">
           <Header />
           <main>{children}</main>
         </MainContainer>

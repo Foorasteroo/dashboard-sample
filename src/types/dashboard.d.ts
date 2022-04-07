@@ -1,17 +1,15 @@
 export interface PodStats {
-  pod: Pod | undefined;
+  pod: LocationPod[] | undefined;
   stats: Stats | undefined;
 }
 
+export interface LocationPod {
+  locationName: string;
+  pods: Pod[] | undefined;
+}
+
 export interface Pod {
-  locationName: LocationName;
-}
-
-export interface LocationName {
-  podName: PodName;
-}
-
-export interface PodName {
+  podName: string;
   podOnlineStatus: boolean;
 }
 

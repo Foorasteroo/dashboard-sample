@@ -5,7 +5,7 @@ import { StatsProvider } from "@/contexts/podStatsContext";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <StatsProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </StatsProvider>
   );
 }

@@ -18,10 +18,10 @@ export const colorMap = {
 export default function InfoCard({ title, variant, children, footer }: Props) {
   return (
     <div
-      className={`p-4 rounded-xl shadow-md shadow-slate-400 w-1/3 text-[#e2eae7] ${colorMap[variant]} `}
+      className={`sm:flex-1 w-full p-4 rounded-xl shadow-md shadow-slate-400 text-[#e2eae7] ${colorMap[variant]} `}
     >
       <div className="flex flex-row justify-between mb-4">
-        <div className="text-lg">{title}</div>
+        <h3 className="text-lg">{title}</h3>
         <div>mode</div>
       </div>
       <div className="text-white text-3xl mb-12">{children}</div>
