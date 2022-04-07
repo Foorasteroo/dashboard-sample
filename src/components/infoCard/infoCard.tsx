@@ -1,12 +1,12 @@
-import { ReactNode, FC } from "react";
-
 type ColorVariant = "teal" | "emerald" | "cyan";
 
 type Props = {
   title: string;
   variant: ColorVariant;
-  children: ReactNode;
   footer: string;
+  value: number | string;
+  mode: string;
+  onModeChange: (mode: string) => void;
 };
 
 export const colorMap = {
@@ -15,16 +15,23 @@ export const colorMap = {
   cyan: "bg-[#4fccdc]",
 };
 
-export default function InfoCard({ title, variant, children, footer }: Props) {
+export default function InfoCard(props: Props) {
+  const { title, variant, value, footer, mode, onModeChange } = props;
+
+  const onClick = () => {
+    const newMode = mode === "week" ? "month" : "week";
+    onModeChange(newMode);
+  };
+
   return (
     <div
-      className={`sm:flex-1 w-full p-4 rounded-xl shadow-md shadow-slate-400 text-[#e2eae7] ${colorMap[variant]} `}
+      className={`flex-auto w-full sm:w-max p-4 rounded-xl shadow-md shadow-slate-400 text-[#e2eae7] ${colorMap[variant]} `}
     >
       <div className="flex flex-row justify-between mb-4">
         <h3 className="text-lg">{title}</h3>
-        <div>mode</div>
+        <div onClick={onClick}>Last {mode}</div>
       </div>
-      <div className="text-white text-3xl mb-12">{children}</div>
+      <div className="text-white text-3xl mb-12">{value}</div>
       <div className="text-sm">{footer}</div>
     </div>
   );
