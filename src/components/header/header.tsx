@@ -1,4 +1,4 @@
-import { ChangeEventHandler, useEffect, useState } from "react";
+import { ChangeEventHandler } from "react";
 import Head from "next/head";
 import { useConfig } from "@/hooks/useConfig";
 
