@@ -6,7 +6,7 @@ export default function PodOnlineStatus() {
   const { pod = [] } = podStats || {};
 
   return (
-    <div className="mb-4 p-4 bg-white shadow-md shadow-slate-400 rounded-xl">
+    <div className="mb-4 p-4 bg-white dark:bg-slate-500 shadow-md shadow-slate-400 dark:shadow-slate-900 rounded-xl">
       <h3 className="text-xl mb-4">Pod Online Status</h3>
       <div className="flex flex-row flex-wrap justify-evenly gap-4">
         {pod.map((locationPod, index) => {

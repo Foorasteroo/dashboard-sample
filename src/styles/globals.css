@@ -1,9 +1,11 @@
-@import "normalize.css/normalize.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #525252;
+html {
+  background-color: #aeadad;
+}
+
+html.dark {
+  background-color: #192230;
 }

@@ -25,7 +25,7 @@ export default function InfoCard(props: Props) {
 
   return (
     <div
-      className={`flex-auto w-full sm:w-max p-4 rounded-xl shadow-md shadow-slate-400 text-[#e2eae7] ${colorMap[variant]} `}
+      className={`flex-auto w-full sm:w-max p-4 rounded-xl shadow-md shadow-slate-400 dark:shadow-slate-900 text-[#e2eae7] ${colorMap[variant]} `}
     >
       <div className="flex flex-row justify-between mb-4">
         <h3 className="text-lg">{title}</h3>

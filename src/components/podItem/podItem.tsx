@@ -10,7 +10,7 @@ export default function PodItem({ pod }: Props) {
   return (
     <div className="flex flex-row gap-4 items-center">
       <StatusLed active={podOnlineStatus} />
-      <span className="text-neutral-600">{podName}</span>
+      <span className="">{podName}</span>
     </div>
   );
 }
